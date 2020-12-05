@@ -1,4 +1,3 @@
-import os
 from flask import Flask
 
 app = Flask(__name__)
@@ -6,7 +5,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     fp = open('/etc/hostname', 'r')
-    line = "Hello World! @" + fp.read() + "| Node : " + os.getenv('MY_NODE_NAME')
+    line = "Hello World!!! @" + fp.read()
     fp.close()
     return line
 
