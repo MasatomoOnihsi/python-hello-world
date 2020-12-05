@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     fp = open('/etc/hostname', 'r')
-    line = "Hello World!!! @" + fp.read()
+    line = "こんにちは世界！ @" + fp.read()
     fp.close()
     return line
 
