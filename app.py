@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     fp = open('/etc/hostname', 'r')
-    line = "こんにちは世界！ @" + fp.read() + "| Node : " + os.getenv('MY_NODE_NAME')
+    line = "こんにちは世界！ (" + os.getenv('MY_NODE_NAME') + ") @" + fp.read() 
     fp.close()
     return line
 
